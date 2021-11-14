@@ -4,7 +4,7 @@ def numPares():
     for i in range(0, 21, 2):
         print(i)
 
-#numPares()
+numPares()
 
 def lowerCase(str):
     return str.lower()
@@ -54,7 +54,7 @@ def retornaArq(file_name):
     df = pd.read_csv(file_name)
     return df.describe()
     
-#retornaArq(file_name)
+retornaArq(file_name)
 
 listaB = [32,53,85,10,15,17,19]
 soma = 0

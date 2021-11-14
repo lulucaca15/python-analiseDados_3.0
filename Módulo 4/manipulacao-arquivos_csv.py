@@ -16,7 +16,7 @@ with open("arquivos/numeros.csv", "r") as arquivo:
     leitor = csv.reader(arquivo)
     dados = list(leitor)
 
-#print(dados)
+print(dados)
 
 for linha in dados[1:]:
     print(linha)

@@ -1,9 +1,9 @@
-#dia = input("Qual dia da semana é Hoje?")
+dia = input("Qual dia da semana é Hoje?")
 
-#if(dia == "Sabado" or dia == "Domingo"):
-#    print("Dia de descanço")
-#else:
-#    print("voce precisa trabalhar")
+if(dia == "Sabado" or dia == "Domingo"):
+   print("Dia de descanço")
+else:
+   print("voce precisa trabalhar")
 
 frutas = ["uva", "Maça", "Ameixa", "Morango", "Abacaxi"]
 if(frutas.__contains__("Morango")):

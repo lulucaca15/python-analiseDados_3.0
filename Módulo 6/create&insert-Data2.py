@@ -2,7 +2,7 @@ import random
 import sqlite3
 import datetime
 import time
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 
 conn = sqlite3.connect('dsaa.db')
 c = conn.cursor()
@@ -57,21 +57,21 @@ def dados_grafico():
     plt.bar(ids, valores)
     plt.show()    
     
-#for i in range(10):
-#    data_insert_var()
-#    time.sleep(1)
+for i in range(10):
+   data_insert_var()
+   time.sleep(1)
     
-#conn.commit()
+conn.commit()
 
-#leitura_todos_dados()
-#leitura_registros()
-#leitura_colunas()
+leitura_todos_dados()
+leitura_registros()
+leitura_colunas()
 
-#leitura_todos_dados()
-#atualiza_dados()
-#leitura_todos_dados()
-#remove_dados()
-#leitura_todos_dados()
+leitura_todos_dados()
+atualiza_dados()
+leitura_todos_dados()
+remove_dados()
+leitura_todos_dados()
 
 dados_grafico()
 

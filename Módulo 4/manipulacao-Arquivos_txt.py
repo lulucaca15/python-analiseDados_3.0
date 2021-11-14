@@ -9,7 +9,7 @@ arquivo.close()
 
 arquivo = open("arquivos/cientista.txt", "r")
 content = arquivo.read()
-#print(content)
+print(content)
 arquivo.close()
 
 with open ("arquivos/cientista.txt", "r") as arquivo:

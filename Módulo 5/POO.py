@@ -10,13 +10,13 @@ class Livro():
 
 
 
-#livro1 = Livro()
-#print(type(livro1))
+livro1 = Livro()
+print(type(livro1))
 
-#print(livro1.titulo)
-#print(livro1.isbn)
+print(livro1.titulo)
+print(livro1.isbn)
 
-#livro1.imprime()
+livro1.imprime()
 #########################################################
 
 livro2 = Livro("A menina", 10294)
@@ -33,10 +33,10 @@ print(Rex.raca)
 
 hasattr(Rex, "raca")
 setattr(Rex, "raca", "Vira-lata")
-#print(Rex.raca)
-#print(getattr(Rex, "idade"))
-#delattr(Rex, "idade")
-#print(Rex.idade)
+print(Rex.raca)
+print(getattr(Rex, "idade"))
+delattr(Rex, "idade")
+print(Rex.idade)
 
 print("##############################################")
 

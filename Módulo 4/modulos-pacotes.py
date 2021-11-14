@@ -6,7 +6,7 @@ import os
 import sys
 import urllib.request
 
-#print(dir(math))
+print(dir(math))
 
 print(math.sqrt(25))
 
@@ -23,14 +23,14 @@ print(statistics.mean(dados))
 print(statistics.median(dados))
 
 print(os.getcwd())
-#print(dir(os))
+print(dir(os))
 print(sys.stdout.write("Testee"))
 
-#print(dir(sys))
+print(dir(sys))
 
 resposta = urllib.request.urlopen("http://python.org")
 print(resposta)
 
 html = resposta.read()
-#print(html)
+print(html)
 
