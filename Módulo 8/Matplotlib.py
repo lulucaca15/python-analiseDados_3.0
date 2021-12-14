@@ -220,8 +220,41 @@ phi_p = np.linspace(0, 2*np.pi, 100)
 X, Y = np.meshgrid(phi_p, phi_m)
 Z = ColorMap(X, Y).T
 
-fig, ax = plt.subplots()
-p = ax.pcolor(X/(2*np.pi), Y/(2*np.pi), Z, cmap=cm.RdBu, vmin=abs(Z).min(), vmax=abs(Z).max())
-cb = fig.colorbar(p, ax=ax)
-plt.show()
+# fig, ax = plt.subplots()
+# p = ax.pcolor(X/(2*np.pi), Y/(2*np.pi), Z, cmap=cm.RdBu, vmin=abs(Z).min(), vmax=abs(Z).max())
+# cb = fig.colorbar(p, ax=ax)
+# plt.show()
 
+#//////////////////  GRÁFICO 3D  //////////////////////////
+from mpl_toolkits.mplot3d.axes3d import Axes3D
+
+# fig = plt.figure(figsize=(14,6))
+
+# ax = fig.add_subplot(1, 2, 1, projection='3d')
+# p = ax.plot_surface(X, Y, Z, rstride=4, cstride=4, linewidth=0)
+
+# ax = fig.add_subplot(1, 2, 2, projection='3d')
+# p = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+# cb = fig.colorbar(p, shrink=0.5)
+# plt.show()
+
+# fig = plt.figure(figsize=(8,6))
+
+# ax = fig.add_subplot(1, 1, 1, projection = '3d')
+# p = ax.plot_wireframe(X, Y, Z, rstride=4, cstride=4)
+# plt.show()
+
+fig = plt.figure(figsize=(8,6))
+
+ax = fig.add_subplot(1, 1, 1, projection='3d')
+
+ax.plot_surface(X, Y, Z, rstride=4, cstride=4, alpha=0.25)
+cset = ax.contour(X, Y, Z, zdir='z', offset=-pi, cmap=cm.coolwarm)
+cset = ax.contour(X, Y, Z, zdir='x', offset=-pi, cmap=cm.coolwarm)
+cset = ax.contour(X, Y, Z, zdir='y', offset=3*pi, cmap=cm.coolwarm)
+
+ax.set_xlim3d(-pi, 2*pi)
+ax.set_ylim3d(0, 3*pi)
+ax.set_zlim3d(-pi, 2*pi)
+
+plt.show()
