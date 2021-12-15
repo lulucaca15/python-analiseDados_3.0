@@ -3,59 +3,59 @@ import matplotlib.pyplot as plt
 
 print(mpl.__version__)
 
-# plt.plot([1,3,5], [2,5,7])
-# plt.show()
+plt.plot([1,3,5], [2,5,7])
+plt.show()
 
 x = [1,4,5]
 y = [3,7,2]
 
-# plt.plot(x, y)
-# plt.xlabel('Variável 1')
-# plt.ylabel('Variável 2')
-# plt.title('Teste Plot')
-# plt.show()
+plt.plot(x, y)
+plt.xlabel('Variável 1')
+plt.ylabel('Variável 2')
+plt.title('Teste Plot')
+plt.show()
 
 x2 = [1,2,3]
 y2 = [11,12,15]
 
-# plt.plot(x2, y2, label = 'Primeira Linha')
-# plt.legend()
-# plt.show()
+plt.plot(x2, y2, label = 'Primeira Linha')
+plt.legend()
+plt.show()
 
 x = [2,4,6,8,10]
 y = [6,7,8,2,4]
 
-# plt.bar(x, y, label = 'Barras', color='r')
-# plt.legend()
-# plt.show()
+plt.bar(x, y, label = 'Barras', color='r')
+plt.legend()
+plt.show()
 
 x2 = [1,3,5,7,9]
 y2 = [7,8,2,4,2]
 
-# plt.bar(x, y, label = 'Barras1', color='r')
-# plt.bar(x2, y2, label = 'Barras2', color='y')
-# plt.legend()
-# plt.show()
+plt.bar(x, y, label = 'Barras1', color='r')
+plt.bar(x2, y2, label = 'Barras2', color='y')
+plt.legend()
+plt.show()
 
 idades = [22,65,45,55,21,22,34,42,41,4,99,101,120,122,130,111,115,80,75,54,44,64,13,18,48]
 ids = [x for x in range(len(idades))]
 
-# plt.bar(ids, idades)
-# plt.show()
+plt.bar(ids, idades)
+plt.show()
 
 bins = [0,10,20,30,40,50,60,70,80,90,100,110,120,130]
-# plt.hist(idades, bins, histtype='bar', rwidth = 0.8)
-# plt.show()
+plt.hist(idades, bins, histtype='bar', rwidth = 0.8)
+plt.show()
 
-# plt.hist(idades, bins, histtype='stepfilled', rwidth = 0.8)
-# plt.show()
+plt.hist(idades, bins, histtype='stepfilled', rwidth = 0.8)
+plt.show()
 
 x = [1,2,3,4,5,6,7,8]
 y = [5,2,4,5,6,8,4,8]
 
-# plt.scatter(x, y, label='Pontos', color= 'r', marker= 'o', s=100)
-# plt.legend()
-# plt.show()
+plt.scatter(x, y, label='Pontos', color= 'r', marker= 'o', s=100)
+plt.legend()
+plt.show()
 
 dias = [1,2,3,4,5]
 dormir = [7,8,6,77,7]
@@ -63,15 +63,15 @@ comer = [2,3,4,5,3]
 trabalhar = [7,8,7,2,2]
 passear = [8,5,7,8,13]
 
-# plt.stackplot(dias, dormir, comer, trabalhar, passear, colors = ['m', 'c', 'r', 'k', 'b'])
-# plt.show()
+plt.stackplot(dias, dormir, comer, trabalhar, passear, colors = ['m', 'c', 'r', 'k', 'b'])
+plt.show()
 
 fatias = [7,2,2,13]
 atividade = ['dormir', 'comer', 'trabalhar', 'passear']
 colunas = ['c', 'm', 'r', 'k']
 
-# plt.pie(fatias, labels = atividade, colors=colunas, startangle = 90, shadow = True, explode = (0,0.1,0,0))
-# plt.show()
+plt.pie(fatias, labels = atividade, colors=colunas, startangle = 90, shadow = True, explode = (0,0.1,0,0))
+plt.show()
 
 from pylab import *
 
@@ -79,12 +79,12 @@ x = linspace(0 ,5 ,10)
 y = (x ** 2)
 fig = plt.figure()
 
-# axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])
-# axes.plot(x, y, 'r')
-# axes.set_xlabel('x')
-# axes.set_ylabel('y')
-# axes.set_title('Gráfico de Linha')
-# plt.show()
+axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+axes.plot(x, y, 'r')
+axes.set_xlabel('x')
+axes.set_ylabel('y')
+axes.set_title('Gráfico de Linha')
+plt.show()
 
 x = linspace(0 ,5 ,10)
 y = (x ** 2)
@@ -92,122 +92,122 @@ y = (x ** 2)
 axes1 = fig.add_axes([0.1,0.1,0.8,0.8])
 axes2 = fig.add_axes([0.2,0.5,0.4,0.3])
 
-# axes1.plot(x, y, 'r')
-# axes1.set_xlabel('x')
-# axes1.set_ylabel('y')
-# axes1.set_title('Figura Principal')
+axes1.plot(x, y, 'r')
+axes1.set_xlabel('x')
+axes1.set_ylabel('y')
+axes1.set_title('Figura Principal')
 
-# axes2.plot(y, x, 'g')
-# axes2.set_xlabel('x')
-# axes2.set_ylabel('y')
-# axes2.set_title('Figura Secundária')
+axes2.plot(y, x, 'g')
+axes2.set_xlabel('x')
+axes2.set_ylabel('y')
+axes2.set_title('Figura Secundária')
 
-# plt.show()
+plt.show()
 
-# fig, axes = plt.subplots(nrows = 1, ncols= 2)
-# for ax in axes:
-#     ax.plot(x, y, 'r')
-#     ax.set_xlabel('x')
-#     ax.set_ylabel('y')
-#     ax.set_title('Título')
-# fig.tight_layout()
-# plt.show()
+fig, axes = plt.subplots(nrows = 1, ncols= 2)
+for ax in axes:
+    ax.plot(x, y, 'r')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_title('Título')
+fig.tight_layout()
+plt.show()
 
 import numpy as np
 
-# plt.scatter(np.arange(50), np.random.randn(50))
-# plt.show()
+plt.scatter(np.arange(50), np.random.randn(50))
+plt.show()
 
-# fig = plt.figure()
+fig = plt.figure()
 
-# ax1 = fig.add_subplot(1,2,1)
-# ax1.plot(np.random.randn(50), color = 'red')
-# ax2 = fig.add_subplot(1,2,2)
-# ax2.scatter(np.arange(50), np.random.randn(50))
-# plt.show()
+ax1 = fig.add_subplot(1,2,1)
+ax1.plot(np.random.randn(50), color = 'red')
+ax2 = fig.add_subplot(1,2,2)
+ax2.scatter(np.arange(50), np.random.randn(50))
+plt.show()
 
-# _, ax = plt.subplots(2,3)
-# ax[0,1].plot(np.random.randn(50), color = 'green', linestyle = '-')
-# ax[1, 0].hist(np.random.randn(50))
-# ax[1, 2].scatter(np.arange(50), np.random.randn(50), color = 'red')
-# plt.show()
+_, ax = plt.subplots(2,3)
+ax[0,1].plot(np.random.randn(50), color = 'green', linestyle = '-')
+ax[1, 0].hist(np.random.randn(50))
+ax[1, 2].scatter(np.arange(50), np.random.randn(50), color = 'red')
+plt.show()
 
-# fig, axes = plt.subplots(1, 3, figsize = (12,4))
+fig, axes = plt.subplots(1, 3, figsize = (12,4))
 
-# axes[0].plot(x, x**2, x, x**3)
-# axes[0].set_title('Eixos com range Padrao')
-# axes[1].plot(x, x**2, x, x**3)
-# axes[1].axis('tight')
-# axes[1].set_title('Eixos Menores')
-# axes[2].plot(x, x**2, x, x**3)
-# axes[2].set_ylim([0,60])
-# axes[2].set_xlim([2,5])
-# axes[2].set_title('Eixos Customizados')
+axes[0].plot(x, x**2, x, x**3)
+axes[0].set_title('Eixos com range Padrao')
+axes[1].plot(x, x**2, x, x**3)
+axes[1].axis('tight')
+axes[1].set_title('Eixos Menores')
+axes[2].plot(x, x**2, x, x**3)
+axes[2].set_ylim([0,60])
+axes[2].set_xlim([2,5])
+axes[2].set_title('Eixos Customizados')
 
-# plt.show()
+plt.show()
 
-# fig, axes = plt.subplots(1, 2, figsize = (10,4))
+fig, axes = plt.subplots(1, 2, figsize = (10,4))
 
-# axes[0].plot(x, x**2, x, exp(x))
-# axes[0].set_title('Escala Padrão')
+axes[0].plot(x, x**2, x, exp(x))
+axes[0].set_title('Escala Padrão')
 
-# axes[1].plot(x, x**2, x, exp(x))
-# axes[1].set_yscale('log')
-# axes[1].set_title('Escala Logarítimica (y)')
-# plt.show()
+axes[1].plot(x, x**2, x, exp(x))
+axes[1].set_yscale('log')
+axes[1].set_title('Escala Logarítimica (y)')
+plt.show()
 
-# fig, axes = plt.subplots(1, 2, figsize = (10,3))
+fig, axes = plt.subplots(1, 2, figsize = (10,3))
 
-# axes[0].plot(x, x**2, x, x**3, lw = 2)
-# axes[0].grid(True)
+axes[0].plot(x, x**2, x, x**3, lw = 2)
+axes[0].grid(True)
 
-# axes[1].plot(x, x**2, x, x**3, lw = 2)
-# axes[1].grid(color = 'b', alpha = 0.5, linestyle = 'dashed', linewidth = 0.5)
+axes[1].plot(x, x**2, x, x**3, lw = 2)
+axes[1].grid(color = 'b', alpha = 0.5, linestyle = 'dashed', linewidth = 0.5)
 
-# plt.show()
+plt.show()
 
-# fig, ax1 = plt.subplots()
+fig, ax1 = plt.subplots()
 
-# ax1.plot(x, x**2, lw=2, color='blue')
-# ax1.set_ylabel('Area', fontsize=18, color='blue')
-# for label in ax1.get_yticklabels():
-#     label.set_color('blue')
+ax1.plot(x, x**2, lw=2, color='blue')
+ax1.set_ylabel('Area', fontsize=18, color='blue')
+for label in ax1.get_yticklabels():
+    label.set_color('blue')
 
-# ax2 = ax1.twinx()   
-# ax2.plot(x, x**3, lw=2, color='red')
-# ax2.set_ylabel('Volume', fontsize=18, color='red')
-# for label in ax2.get_yticklabels():
-#     label.set_color('red')
+ax2 = ax1.twinx()   
+ax2.plot(x, x**3, lw=2, color='red')
+ax2.set_ylabel('Volume', fontsize=18, color='red')
+for label in ax2.get_yticklabels():
+    label.set_color('red')
     
-# plt.show()
+plt.show()
 
 xx = np.linspace(-0.75, 1., 100)
 n = np.array([0,1,2,3,4,5])
 
-# fig, axes = plt.subplots(1, 4, figsize=(12,3))
+fig, axes = plt.subplots(1, 4, figsize=(12,3))
 
-# axes[0].scatter(xx, xx+0.25*randn(len(xx)))
-# axes[0].set_title('scatter')
-# axes[1].step(n, n**2, lw=2)
-# axes[1].set_title('step')
-# axes[2].bar(n, n**2, align='center', width=0.5, alpha=0.5)
-# axes[2].set_title('bar')
-# axes[3].fill_between(x, x**2, x**3, color='green', alpha=0.5)
-# axes[3].set_title('fill_between')
-# plt.show()
+axes[0].scatter(xx, xx+0.25*randn(len(xx)))
+axes[0].set_title('scatter')
+axes[1].step(n, n**2, lw=2)
+axes[1].set_title('step')
+axes[2].bar(n, n**2, align='center', width=0.5, alpha=0.5)
+axes[2].set_title('bar')
+axes[3].fill_between(x, x**2, x**3, color='green', alpha=0.5)
+axes[3].set_title('fill_between')
+plt.show()
 
-# n = np.random.randn(100000)
-# fig, axes = plt.subplots(1,2, figsize=(12,4))
+n = np.random.randn(100000)
+fig, axes = plt.subplots(1,2, figsize=(12,4))
 
-# axes[0].hist(n)
-# axes[0].set_title('Histograma Padrao')
-# axes[0].set_xlim((min(n), max(n)))
+axes[0].hist(n)
+axes[0].set_title('Histograma Padrao')
+axes[0].set_xlim((min(n), max(n)))
 
-# axes[1].hist(n, cumulative=True, bins=50)
-# axes[1].set_title('Histograma Cumulativo')
-# axes[1].set_xlim(min(n), max(n))
+axes[1].hist(n, cumulative=True, bins=50)
+axes[1].set_title('Histograma Cumulativo')
+axes[1].set_xlim(min(n), max(n))
 
-# plt.show()
+plt.show()
 
 alpha = 0.7
 phi_ext = 2 * np.pi*0.5
@@ -220,29 +220,29 @@ phi_p = np.linspace(0, 2*np.pi, 100)
 X, Y = np.meshgrid(phi_p, phi_m)
 Z = ColorMap(X, Y).T
 
-# fig, ax = plt.subplots()
-# p = ax.pcolor(X/(2*np.pi), Y/(2*np.pi), Z, cmap=cm.RdBu, vmin=abs(Z).min(), vmax=abs(Z).max())
-# cb = fig.colorbar(p, ax=ax)
-# plt.show()
+fig, ax = plt.subplots()
+p = ax.pcolor(X/(2*np.pi), Y/(2*np.pi), Z, cmap=cm.RdBu, vmin=abs(Z).min(), vmax=abs(Z).max())
+cb = fig.colorbar(p, ax=ax)
+plt.show()
 
 #//////////////////  GRÁFICO 3D  //////////////////////////
 from mpl_toolkits.mplot3d.axes3d import Axes3D
 
-# fig = plt.figure(figsize=(14,6))
+fig = plt.figure(figsize=(14,6))
 
-# ax = fig.add_subplot(1, 2, 1, projection='3d')
-# p = ax.plot_surface(X, Y, Z, rstride=4, cstride=4, linewidth=0)
+ax = fig.add_subplot(1, 2, 1, projection='3d')
+p = ax.plot_surface(X, Y, Z, rstride=4, cstride=4, linewidth=0)
 
-# ax = fig.add_subplot(1, 2, 2, projection='3d')
-# p = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-# cb = fig.colorbar(p, shrink=0.5)
-# plt.show()
+ax = fig.add_subplot(1, 2, 2, projection='3d')
+p = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+cb = fig.colorbar(p, shrink=0.5)
+plt.show()
 
-# fig = plt.figure(figsize=(8,6))
+fig = plt.figure(figsize=(8,6))
 
-# ax = fig.add_subplot(1, 1, 1, projection = '3d')
-# p = ax.plot_wireframe(X, Y, Z, rstride=4, cstride=4)
-# plt.show()
+ax = fig.add_subplot(1, 1, 1, projection = '3d')
+p = ax.plot_wireframe(X, Y, Z, rstride=4, cstride=4)
+plt.show()
 
 fig = plt.figure(figsize=(8,6))
 
